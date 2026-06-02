@@ -2,10 +2,12 @@ export interface Project {
   id: string;
   title: string;
   date: string;
+  category: "AI" | "Full Stack" | "Web App";
   tags: string[];
   tagline: string;
   description: string;
   highlights: string[];
+  image?: string;
   links: {
     github?: string;
     live?: string;
@@ -19,12 +21,13 @@ export const projects: Project[] = [
   {
     id: "pitch-craft",
     title: "Pitch Craft",
-    date: "October 2025",
+    date: "Oct 2025",
+    category: "AI",
     tags: ["AI", "Next.js", "TypeScript", "Hackathon"],
     tagline: "AI-powered development planning tool",
     description:
-      "Built during a hackathon at Zaitoon Ashraf IT Park. Integrated generative AI APIs to automate requirement gathering and generate automated implementation plans. Improved project scoping efficiency significantly.",
-    highlights: ["Team lead", "Real-world prototype", "Fast delivery under pressure"],
+      "Built during a hackathon at Zaitoon Ashraf IT Park. Integrated generative AI APIs to automate requirement gathering and generate automated implementation plans.",
+    highlights: ["Team lead", "Real-world prototype", "Hackathon Winner"],
     links: {
       github: "https://github.com/AunMohammad254/pitch-craft",
       live: "https://pitch-craft.vercel.app",
@@ -36,15 +39,16 @@ export const projects: Project[] = [
   {
     id: "closet-by-era",
     title: "Closet By Era",
-    date: "November 2025",
+    date: "Nov 2025",
+    category: "Full Stack",
     tags: ["E-Commerce", "Supabase", "Next.js 16", "Tailwind CSS"],
     tagline: "AI-styled full-stack fashion e-commerce platform",
     description:
-      "Full-stack e-commerce store with Supabase PostgreSQL, role-based access control, AI styling assistant, multi-currency support, and automated email notifications.",
-    highlights: ["RBAC", "Auth system", "Multi-currency", "Email automation"],
+      "Full-stack e-commerce store with Supabase PostgreSQL, role-based access control, AI styling assistant, and multi-currency support.",
+    highlights: ["RBAC", "Auth system", "Multi-currency"],
     links: {
       github: "https://github.com/AunMohammad254/closet-by-era",
-      live: "https://closet-by-era.vercel.app",
+      live: "https://closet-by-era-two.vercel.app/",
     },
     accentColor: "#06D6A0",
     featured: false,
@@ -52,15 +56,16 @@ export const projects: Project[] = [
   {
     id: "1think2win",
     title: "1Think2Win",
-    date: "December 2025",
+    date: "Dec 2025",
+    category: "Web App",
     tags: ["Quiz Platform", "Real-time", "Supabase", "TypeScript"],
     tagline: "Real-time gamified quiz gaming platform",
     description:
-      "Full-stack quiz platform with real-time scoring, leaderboards, secure authentication, and mobile-first gamified UI. Optimized for high concurrency during timed quiz events.",
-    highlights: ["Real-time", "Leaderboard", "RBAC", "Mobile-first", "Concurrency optimized"],
+      "Full-stack quiz platform with real-time scoring, leaderboards, and mobile-first gamified UI. Optimized for high concurrency.",
+    highlights: ["Real-time", "Leaderboard", "Mobile-first"],
     links: {
       github: "https://github.com/AunMohammad254/1think2win",
-      live: "https://1think2win.vercel.app",
+      live: "https://1think2winsx.vercel.app/",
     },
     accentColor: "#3B82F6",
     featured: false,

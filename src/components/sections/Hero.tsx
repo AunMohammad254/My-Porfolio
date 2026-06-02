@@ -157,6 +157,7 @@ export default function Hero() {
                   src="/image.png"
                   alt="Aun Abbas"
                   fill
+                  sizes="(max-width: 640px) 256px, (max-width: 768px) 288px, 288px"
                   className="object-cover object-center"
                   priority
                 />

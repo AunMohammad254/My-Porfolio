@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useScrollProgress } from "@/hooks/useScrollProgress";
 import { staggerContainer, fadeUp } from "@/lib/motion-config";
 import { cn } from "@/lib/utils";
+import { ThemeToggle } from "@/components/ui/ThemeToggle";
 
 const navLinks = [
   { href: "#home", label: "Home" },
@@ -89,6 +90,7 @@ export default function Navbar() {
           </div>
 
           <div className="hidden lg:flex items-center gap-4">
+            <ThemeToggle />
             <a
               href="https://github.com/AunMohammad254"
               target="_blank"
@@ -158,6 +160,9 @@ export default function Navbar() {
                   {link.label}
                 </motion.button>
               ))}
+              <motion.div variants={fadeUp} className="pt-4">
+                <ThemeToggle />
+              </motion.div>
             </motion.div>
           </motion.div>
         )}
